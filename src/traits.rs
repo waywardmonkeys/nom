@@ -1454,7 +1454,7 @@ impl NomRange<usize> for Range<usize> {
   }
 
   fn is_inverted(&self) -> bool {
-    !(self.start < self.end)
+    self.start >= self.end
   }
 
   fn saturating_iter(&self) -> Self::Saturating {
